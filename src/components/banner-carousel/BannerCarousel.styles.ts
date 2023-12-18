@@ -51,6 +51,22 @@ export const ImageContainer = styled(Container, {
     filter: "brightness(55%)",
 
     animation: `0.7s ${enterToRight} forwards`,
+
+    "&.desktopImage": {
+      display: "none",
+
+      "@xl": {
+        display: "block",
+      },
+    },
+
+    "&.mobileImage": {
+      display: "block",
+
+      "@xl": {
+        display: "none",
+      },
+    },
   },
 
   "[class*='-size-12']": {
@@ -186,19 +202,21 @@ export const BannerSelectorContent = styled("div", {
 });
 
 export const BannerItem = styled(Col, {
+  height: "200px",
+
+  "@lg": {
+    height: "auto",
+  },
+
   img: {
     objectFit: "cover",
+    objectPosition: "20% left",
+
+    transition: "all 0.3s ease",
+    cursor: "pointer",
     width: "100%",
     maxHeight: "100%",
     height: "auto",
-    transition: "all 0.3s ease",
-    cursor: "pointer",
-
-    "@md": {
-      width: "auto",
-      maxWidth: "100%",
-      height: "280px",
-    },
 
     "@xl": {
       "&:hover": {
