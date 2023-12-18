@@ -135,7 +135,8 @@ export const BannerInfo = styled(Col, {
   p: {
     fontWeight: "bold",
     opacity: 0,
-    animation: `0.5s ease 1s ${fadeInLeft} forwards`,
+    animation: `0.5s ease 1s ${fadeIn} forwards`,
+    display: "flex",
 
     "@md": {
       width: "70%",
