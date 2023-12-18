@@ -18,10 +18,6 @@ import BannerImage1 from "@/public/example/example-image-01.jpg";
 import BannerImage2 from "@/public/example/example-image-02.jpg";
 import BannerImage3 from "@/public/example/example-image-03.jpg";
 
-import BannerMobileImage1 from "@/public/example/example-mobile-image-01.jpg";
-import BannerMobileImage2 from "@/public/example/example-mobile-image-02.jpg";
-import BannerMobileImage3 from "@/public/example/example-mobile-image-03.jpg";
-
 import "swiper/css";
 import "swiper/css/thumbs";
 import "swiper/css/free-mode";
@@ -85,7 +81,7 @@ export const BannerCarousel: React.FC<BannerCarouselProps> = () => {
         <Container>
           <Row>
             <BannerContent size={12} xl={8} className="">
-              <Row className="align-center">
+              <Row className="align-center pt-12 pt-xl-0">
                 <div>
                   <BannerTitle key={`title-key-${itemSource}`}>
                     {BannerData[itemSource].title}

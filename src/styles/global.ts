@@ -73,7 +73,7 @@ export const globalStyles = globalCss({
 
   "p, input, textarea": {
     fontFamily: "$body",
-    fontSize: "$md",
+    fontSize: "$sm",
     lineHeight: "160%",
 
     "@md": {

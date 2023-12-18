@@ -19,7 +19,6 @@ export const BannerContent = styled(Col, {
   zIndex: 3,
   minHeight: "350px",
   alignContent: "center",
-  paddingTop: "$20",
 
   "@md": {
     minHeight: "500px",
@@ -135,15 +134,16 @@ export const BannerInfo = styled(Col, {
 
   p: {
     fontWeight: "bold",
-    display: "none",
-
-    "@sm": {
-      display: "flex",
-    },
-
-    width: "100%",
     opacity: 0,
     animation: `0.5s ease 1s ${fadeInLeft} forwards`,
+
+    "@md": {
+      width: "70%",
+    },
+
+    "@xl": {
+      width: "100%",
+    },
   },
 });
 
@@ -155,11 +155,11 @@ export const BannerSelectorContent = styled("div", {
   maxWidth: "105%",
   width: "105%",
   overflowX: "auto",
+  marginTop: "$4",
 
   "@sm": {
     maxWidth: "calc(100% + ((100vw - 540px) /2))",
     width: "calc(100% + ((100vw - 540px) /2))",
-    marginTop: "$4",
   },
 
   "@md": {
@@ -171,7 +171,6 @@ export const BannerSelectorContent = styled("div", {
   "@lg": {
     maxWidth: "100%",
     width: "100%",
-    // gridTemplateColumns: "repeat(3, calc(33.3% - 5px))",
   },
 
   "@xl": {
