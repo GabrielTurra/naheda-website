@@ -37,7 +37,6 @@ const BannerData = [
               consectetur, corporis eligendi architecto alias debitis
               quisquam asperiores possimus a fugit hic fugiat.`,
     image: BannerImage1,
-    imageMobile: BannerMobileImage1,
   },
   {
     title: "Outro Título bom bem aqui chefe!",
@@ -47,7 +46,6 @@ const BannerData = [
               consectetur, corporis eligendi architecto alias debitis
               quisquam asperiores possimus a fugit hic fugiat.`,
     image: BannerImage2,
-    imageMobile: BannerMobileImage2,
   },
   {
     title: "Eita, mais um título bom aqui!",
@@ -57,7 +55,6 @@ const BannerData = [
               consectetur, corporis eligendi architecto alias debitis
               quisquam asperiores possimus a fugit hic fugiat.`,
     image: BannerImage3,
-    imageMobile: BannerMobileImage3,
   },
 ];
 
@@ -75,20 +72,10 @@ export const BannerCarousel: React.FC<BannerCarouselProps> = () => {
           <Row>
             <Col size={12} xl={8}>
               <Image
-                className="desktopImage"
                 key={`image-key-${itemSource}`}
                 src={BannerData[itemSource].image.src}
-                width={1540}
-                height={866}
-                alt=""
-                priority
-              />
-              <Image
-                className="mobileImage"
-                key={`image-mobile-key-${itemSource}`}
-                src={BannerData[itemSource].imageMobile.src}
-                width={385}
-                height={660}
+                width={BannerData[itemSource].image.width}
+                height={BannerData[itemSource].image.height}
                 alt=""
                 priority
               />
@@ -130,7 +117,7 @@ export const BannerCarousel: React.FC<BannerCarouselProps> = () => {
                     {BannerData.map((bannerItem, index) => (
                       <BannerItem onClick={() => updateBannerContent(index)}>
                         <Image
-                          src={bannerItem.imageMobile.src}
+                          src={bannerItem.image.src}
                           width={280}
                           height={320}
                           alt=""

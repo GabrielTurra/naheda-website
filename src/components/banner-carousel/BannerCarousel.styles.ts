@@ -26,7 +26,7 @@ export const BannerContent = styled(Col, {
   },
 
   "@xl": {
-    minHeight: "800px",
+    minHeight: "900px",
     paddingTop: "0",
   },
 
@@ -51,22 +51,6 @@ export const ImageContainer = styled(Container, {
     filter: "brightness(55%)",
 
     animation: `0.7s ${enterToRight} forwards`,
-
-    "&.desktopImage": {
-      display: "none",
-
-      "@xl": {
-        display: "block",
-      },
-    },
-
-    "&.mobileImage": {
-      display: "block",
-
-      "@xl": {
-        display: "none",
-      },
-    },
   },
 
   "[class*='-size-12']": {
@@ -165,7 +149,7 @@ export const BannerInfo = styled(Col, {
 
 export const BannerSelectorContent = styled("div", {
   display: "grid",
-  gridTemplateColumns: "repeat(3, 280px)",
+  gridTemplateColumns: "repeat(3, 180px)",
   gridGap: "10px",
 
   maxWidth: "105%",
@@ -181,12 +165,13 @@ export const BannerSelectorContent = styled("div", {
   "@md": {
     maxWidth: "calc(100% + ((100vw - 672px) /2))",
     width: "calc(100% + ((100vw - 672px) /2))",
+    gridTemplateColumns: "repeat(3, 250px)",
   },
 
   "@lg": {
     maxWidth: "100%",
     width: "100%",
-    gridTemplateColumns: "repeat(3, calc(33.3% - 5px))",
+    // gridTemplateColumns: "repeat(3, calc(33.3% - 5px))",
   },
 
   "@xl": {
@@ -202,15 +187,9 @@ export const BannerSelectorContent = styled("div", {
 });
 
 export const BannerItem = styled(Col, {
-  height: "200px",
-
-  "@lg": {
-    height: "auto",
-  },
-
   img: {
     objectFit: "cover",
-    objectPosition: "20% left",
+    objectPosition: "right",
 
     transition: "all 0.3s ease",
     cursor: "pointer",
@@ -225,7 +204,7 @@ export const BannerItem = styled(Col, {
     },
 
     "@lg": {
-      height: "320px",
+      height: "200px",
     },
   },
 
