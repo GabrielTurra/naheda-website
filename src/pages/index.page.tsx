@@ -1,9 +1,9 @@
 import { HomeLayout } from "@/src/layouts/home";
-import { GetServerSideProps } from "next";
+import { GetStaticProps } from "next";
 
 interface RouteProps {}
 
-export const getServerSideProps: GetServerSideProps<RouteProps> = async () => {
+export const getStaticProps: GetStaticProps<RouteProps> = async () => {
   return {
     props: {},
   };

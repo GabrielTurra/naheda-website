@@ -73,6 +73,7 @@ export const BannerCarousel: React.FC<BannerCarouselProps> = () => {
                 width={BannerData[itemSource].image.width}
                 height={BannerData[itemSource].image.height}
                 alt=""
+                priority
               />
             </Col>
           </Row>
@@ -116,6 +117,7 @@ export const BannerCarousel: React.FC<BannerCarouselProps> = () => {
                           width={bannerItem.image.width}
                           height={bannerItem.image.height}
                           alt=""
+                          priority
                         />
                       </BannerItem>
                     ))}

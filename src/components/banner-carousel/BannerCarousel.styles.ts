@@ -4,7 +4,7 @@ import {
   fadeInTop,
   fadeIn,
 } from "@/src/styles/animations";
-import { Col, Container, Row } from "@/src/styles/grid";
+import { Col, Container } from "@/src/styles/grid";
 import { styled } from "@/stitches.config";
 
 export const BannerCarouselComponent = styled("div", {
@@ -19,7 +19,7 @@ export const BannerContent = styled(Col, {
   zIndex: 3,
   minHeight: "350px",
   alignContent: "center",
-  paddingTop: "$30",
+  paddingTop: "$20",
 
   "@md": {
     minHeight: "500px",
@@ -27,6 +27,7 @@ export const BannerContent = styled(Col, {
 
   "@xl": {
     minHeight: "800px",
+    paddingTop: "0",
   },
 
   button: {
@@ -63,8 +64,8 @@ export const ImageContainer = styled(Container, {
     },
 
     "@xxl": {
-      maxWidth: "calc(66.6667% + ((100vw - 1880px) / 2)) !important",
-      flex: "0 0 calc(66.6667% + ((100vw - 1880px) / 2)) !important",
+      maxWidth: "calc(66.6667% + ((100vw - 1600px) / 2)) !important",
+      flex: "0 0 calc(66.6667% + ((100vw - 1600px) / 2)) !important",
     },
   },
 });
@@ -108,10 +109,6 @@ export const BannerInfo = styled(Col, {
     paddingRight: "0",
     marginTop: "$40",
     textAlign: "end",
-  },
-
-  "@el": {
-    paddingLeft: "$30",
   },
 
   h2: {
@@ -180,7 +177,7 @@ export const BannerSelectorContent = styled("div", {
     gridTemplateColumns: "repeat(3, 250px)",
     marginLeft: "calc((-$30 + -125px))",
     justifyContent: "end",
-    marginTop: "$20",
+    marginTop: "$8",
 
     width: "unset",
     maxWidth: "unset",
@@ -233,6 +230,7 @@ export const BannerItem = styled(Col, {
 export const PageCount = styled("div", {
   color: "$gray400",
   marginTop: "$4",
+  position: "absolute",
 
   fontSize: "$lg",
 
@@ -241,6 +239,6 @@ export const PageCount = styled("div", {
 
   "@md": {
     fontSize: "$2xl",
-    marginTop: "$20",
+    marginTop: "$8",
   },
 });
