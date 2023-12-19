@@ -17,7 +17,7 @@ export const BannerCarouselBackground = styled("div", {
 
 export const BannerContent = styled(Col, {
   zIndex: 3,
-  minHeight: "350px",
+  minHeight: "400px",
   alignContent: "center",
 
   "@md": {
@@ -156,7 +156,7 @@ export const BannerSelectorContent = styled("div", {
   maxWidth: "105%",
   width: "105%",
   overflowX: "auto",
-  marginTop: "$4",
+  marginTop: "$6",
 
   "@sm": {
     maxWidth: "calc(100% + ((100vw - 540px) /2))",

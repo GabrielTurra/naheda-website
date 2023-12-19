@@ -81,7 +81,7 @@ export const BannerCarousel: React.FC<BannerCarouselProps> = () => {
         <Container>
           <Row>
             <BannerContent size={12} xl={8} className="">
-              <Row className="align-center pt-12 pt-xl-0">
+              <Row className="align-center pt-16 pt-xl-0">
                 <div>
                   <BannerTitle key={`title-key-${itemSource}`}>
                     {BannerData[itemSource].title}
