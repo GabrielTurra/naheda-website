@@ -198,13 +198,15 @@ export const BannerItem = styled(Col, {
     height: "auto",
 
     "@xl": {
+      height: "280px",
+
       "&:hover": {
         marginTop: "-20px",
       },
     },
 
-    "@lg": {
-      height: "200px",
+    "@xxl": {
+      height: "320px",
     },
   },
 
