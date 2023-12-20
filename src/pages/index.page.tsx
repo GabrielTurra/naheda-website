@@ -24,25 +24,25 @@ const HomeLayoutStaticData = {
       },
       {
         id: 2,
-        title: "Conheça a nossa fábrica!",
+        title: "A melhor opção em elétrica industrial!",
         subtitle: "Lorem Ipsum Subtitle",
         content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Dolorem, qui ipsa et repellendus magni natus accusamus rem
                   consectetur, corporis eligendi architecto alias debitis
                   quisquam asperiores possimus a fugit hic fugiat.`,
         image: BannerImage2,
-        topic: "A Fábrica",
+        topic: "Elétrica",
       },
       {
         id: 3,
-        title: "Eita, mais um título bom aqui!",
+        title: "Conheça a nossa fábrica!",
         subtitle: "Lorem Ipsum Subtitle",
         content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Dolorem, qui ipsa et repellendus magni natus accusamus rem
                   consectetur, corporis eligendi architecto alias debitis
                   quisquam asperiores possimus a fugit hic fugiat.`,
         image: BannerImage3,
-        topic: "Tópico Extra",
+        topic: "A Fábrica",
       },
     ],
   } as BannerCarouselProps,
