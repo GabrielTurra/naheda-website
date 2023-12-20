@@ -1,5 +1,5 @@
-import { StructureCSS } from "./css";
-import { CreateArrayWithLengthX, NumericRange } from "./numberRange";
+import { StructureCSS } from "./StructureCSS";
+import { CreateArrayWithLengthX, NumericRange } from "./NumericRange";
 
 type ZERO_TO_TWELVE = NumericRange<CreateArrayWithLengthX<0>, 12>;
 

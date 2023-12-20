@@ -8,15 +8,13 @@ import {
   BannerItem,
   BannerSelectorContent,
   PageCount,
+  ItemOverlay,
+  TextTopic,
 } from "./BannerCarousel.styles";
 import { BannerCarouselProps } from "./BannerCarousel.types";
 
 import Image from "next/image";
 import { Col, Container, Row } from "@/src/styles/grid";
-
-import BannerImage1 from "@/public/example/example-image-01.jpg";
-import BannerImage2 from "@/public/example/example-image-02.jpg";
-import BannerImage3 from "@/public/example/example-image-03.jpg";
 
 import "swiper/css";
 import "swiper/css/thumbs";
@@ -24,37 +22,9 @@ import "swiper/css/free-mode";
 import { Button } from "../lib/button";
 import { useState } from "react";
 
-const BannerData = [
-  {
-    title: "Bem vindo a nossa fábrica!",
-    subtitle: "Lorem Ipsum Subtitle",
-    content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Dolorem, qui ipsa et repellendus magni natus accusamus rem
-              consectetur, corporis eligendi architecto alias debitis
-              quisquam asperiores possimus a fugit hic fugiat.`,
-    image: BannerImage1,
-  },
-  {
-    title: "Outro Título bom bem aqui chefe!",
-    subtitle: "Lorem Ipsum Subtitle",
-    content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Dolorem, qui ipsa et repellendus magni natus accusamus rem
-              consectetur, corporis eligendi architecto alias debitis
-              quisquam asperiores possimus a fugit hic fugiat.`,
-    image: BannerImage2,
-  },
-  {
-    title: "Eita, mais um título bom aqui!",
-    subtitle: "Lorem Ipsum Subtitle",
-    content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Dolorem, qui ipsa et repellendus magni natus accusamus rem
-              consectetur, corporis eligendi architecto alias debitis
-              quisquam asperiores possimus a fugit hic fugiat.`,
-    image: BannerImage3,
-  },
-];
-
-export const BannerCarousel: React.FC<BannerCarouselProps> = () => {
+export const BannerCarousel: React.FC<BannerCarouselProps> = ({
+  itemsCarousel,
+}) => {
   const [itemSource, setItemSource] = useState(0);
 
   const updateBannerContent = (index: number) => {
@@ -69,9 +39,9 @@ export const BannerCarousel: React.FC<BannerCarouselProps> = () => {
             <Col size={12} xl={8}>
               <Image
                 key={`image-key-${itemSource}`}
-                src={BannerData[itemSource].image.src}
-                width={BannerData[itemSource].image.width}
-                height={BannerData[itemSource].image.height}
+                src={itemsCarousel[itemSource].image.src}
+                width={itemsCarousel[itemSource].image.width}
+                height={itemsCarousel[itemSource].image.height}
                 alt=""
                 priority
               />
@@ -84,7 +54,7 @@ export const BannerCarousel: React.FC<BannerCarouselProps> = () => {
               <Row className="align-center pt-16 pt-xl-0">
                 <div>
                   <BannerTitle key={`title-key-${itemSource}`}>
-                    {BannerData[itemSource].title}
+                    {itemsCarousel[itemSource].title}
                   </BannerTitle>
                   <Button
                     key={`button-key-${itemSource}`}
@@ -92,7 +62,7 @@ export const BannerCarousel: React.FC<BannerCarouselProps> = () => {
                   />
                   <PageCount key={`pageCount-key-${itemSource}`}>
                     <span>
-                      {itemSource + 1}/{BannerData.length}
+                      {itemSource + 1}/{itemsCarousel.length}
                     </span>
                   </PageCount>
                 </div>
@@ -102,16 +72,20 @@ export const BannerCarousel: React.FC<BannerCarouselProps> = () => {
               <Row className="content-center text-white">
                 <Col size={12}>
                   <h2 key={`subtitle-key-${itemSource}`}>
-                    {BannerData[itemSource].subtitle}
+                    {itemsCarousel[itemSource].subtitle}
                   </h2>
                   <p key={`paragraph-key-${itemSource}`}>
-                    {BannerData[itemSource].content}
+                    {itemsCarousel[itemSource].content}
                   </p>
                 </Col>
                 <Col size={12}>
                   <BannerSelectorContent>
-                    {BannerData.map((bannerItem, index) => (
-                      <BannerItem onClick={() => updateBannerContent(index)}>
+                    {itemsCarousel.map((bannerItem, index) => (
+                      <BannerItem
+                        key={`slider-selector-${bannerItem.id}`}
+                        onClick={() => updateBannerContent(index)}
+                        className={`${itemSource === index ? "active" : ""}`}
+                      >
                         <Image
                           src={bannerItem.image.src}
                           width={280}
@@ -119,6 +93,11 @@ export const BannerCarousel: React.FC<BannerCarouselProps> = () => {
                           alt=""
                           priority
                         />
+                        <ItemOverlay />
+                        <TextTopic>
+                          <h3>{bannerItem.topic}</h3>
+                          <p>{bannerItem.subtitle}</p>
+                        </TextTopic>
                       </BannerItem>
                     ))}
                   </BannerSelectorContent>

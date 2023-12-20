@@ -46,8 +46,8 @@ export const ImageContainer = styled(Container, {
     objectFit: "cover",
     width: "100%",
     height: "100%",
-    top: 0,
     filter: "brightness(55%)",
+    top: 0,
 
     animation: `0.7s ${enterToRight} forwards`,
   },
@@ -75,10 +75,6 @@ export const BannerTitle = styled("h1", {
   opacity: 0,
 
   animation: `0.5s ease ${fadeInTop} forwards`,
-
-  "@xs": {
-    maxWidth: "80%",
-  },
 
   "@sm": {
     maxWidth: "70%",
@@ -186,27 +182,95 @@ export const BannerSelectorContent = styled("div", {
   },
 });
 
+export const ItemOverlay = styled("div", {
+  width: "100%",
+  height: "100%",
+
+  position: "absolute",
+  top: 0,
+  left: 0,
+
+  opacity: 0,
+  backgroundColor: "$primary",
+  transition: "all 0.3s ease",
+});
+
+export const TextTopic = styled("div", {
+  position: "absolute",
+  left: "$4",
+  bottom: 0,
+  textAlign: "left",
+
+  opacity: 0,
+  transition: "all 0.3s ease",
+
+  h3: {
+    transition: "all 0.3s ease",
+    fontFamily: "$body",
+    fontSize: "$lg",
+  },
+
+  p: {
+    fontWeight: "$regular",
+    fontSize: "$md",
+    display: "none",
+
+    "@lg": {
+      display: "block",
+    },
+  },
+});
+
 export const BannerItem = styled(Col, {
+  position: "relative",
+
+  "&.active": {
+    [`${ItemOverlay}`]: {
+      opacity: 0.5,
+    },
+
+    [`${TextTopic}`]: {
+      opacity: 1,
+      bottom: "$4",
+    },
+  },
+
   img: {
     objectFit: "cover",
-    objectPosition: "right",
+    objectPosition: "center",
 
     transition: "all 0.3s ease",
-    cursor: "pointer",
     width: "100%",
     maxHeight: "100%",
     height: "auto",
 
     "@xl": {
       height: "280px",
-
-      "&:hover": {
-        marginTop: "-20px",
-      },
     },
 
     "@xxl": {
       height: "320px",
+    },
+  },
+
+  "&:not(.active)": {
+    cursor: "pointer",
+
+    "&:hover": {
+      "@md": {
+        [`${ItemOverlay}, img`]: {
+          marginTop: "-20px",
+        },
+
+        [`${ItemOverlay}`]: {
+          opacity: 0.2,
+        },
+
+        [`${TextTopic}`]: {
+          opacity: 1,
+          bottom: "calc($4 + 20px)",
+        },
+      },
     },
   },
 

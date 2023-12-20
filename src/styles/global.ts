@@ -46,7 +46,7 @@ export const globalStyles = globalCss({
   "h3, .h3": {
     fontFamily: "$title",
     fontSize: "$3xl",
-    lineHeight: "40px",
+    lineHeight: "120%",
 
     "@lg": {
       fontSize: "$4xl",

@@ -1,6 +1,6 @@
 import { styled } from "@/stitches.config";
 import { breakpoints } from "@/src/styles/tokens/breakpoints";
-import { ColGridResponsiveType } from "../../@types/grid";
+import { ColGridResponsiveType } from "@/src/@types/Grid";
 import { colSizesStyles } from "./styles";
 
 const gridColGridResponsive = Object.keys(breakpoints).reduce(
