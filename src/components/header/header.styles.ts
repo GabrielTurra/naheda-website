@@ -13,7 +13,7 @@ export const HeaderComponent = styled("div", {
   zIndex: "5",
 
   opacity: 0,
-  animation: `0.5s ease 1.5s ${fadeInTop} forwards`,
+  animation: `0.5s ease 0.6s ${fadeInTop} forwards`,
 
   [`${Row}`]: {
     justifyContent: "space-between",

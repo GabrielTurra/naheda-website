@@ -31,7 +31,7 @@ export const BannerContent = styled(Col, {
 
   button: {
     opacity: 0,
-    animation: `0.5s ease 0.8s ${fadeInLeft} forwards`,
+    animation: `0.5s ease 0.3s ${fadeInLeft} forwards`,
   },
 });
 
@@ -77,7 +77,7 @@ export const BannerTitle = styled("h1", {
   animation: `0.5s ease ${fadeInTop} forwards`,
 
   "@sm": {
-    maxWidth: "70%",
+    maxWidth: "90%",
   },
 
   "@md": {
@@ -97,9 +97,9 @@ export const BannerInfo = styled(Col, {
   boxSizing: "border-box",
   padding: "$5 0",
   zIndex: 3,
+  paddingBottom: "$section",
 
   "@xl": {
-    background: "$primary",
     paddingLeft: "$10",
     paddingRight: "0",
     marginTop: "$40",
@@ -110,7 +110,7 @@ export const BannerInfo = styled(Col, {
     fontSize: "$2xl",
     marginBottom: "15px",
     opacity: 0,
-    animation: `0.5s ease 0.6s ${fadeInLeft} forwards`,
+    animation: `0.5s ease 0.3s ${fadeInLeft} forwards`,
 
     display: "none",
 
@@ -131,7 +131,7 @@ export const BannerInfo = styled(Col, {
   p: {
     fontWeight: "bold",
     opacity: 0,
-    animation: `0.5s ease 1s ${fadeIn} forwards`,
+    animation: `0.5s ease 0.5s ${fadeIn} forwards`,
     display: "flex",
 
     "@md": {
@@ -207,13 +207,15 @@ export const TextTopic = styled("div", {
   h3: {
     transition: "all 0.3s ease",
     fontFamily: "$body",
-    fontSize: "$lg",
+    fontSize: "$xl",
   },
 
   p: {
     fontWeight: "$regular",
     fontSize: "$md",
     display: "none",
+    transition: "all 0.3s ease",
+    margin: 0,
 
     "@lg": {
       display: "block",
@@ -276,32 +278,31 @@ export const BannerItem = styled(Col, {
 
   "&:nth-child(1)": {
     opacity: 0,
-    animation: `0.5s ease 1.2s ${fadeInTop} forwards`,
+    animation: `0.5s ease 0.6s ${fadeInTop} forwards`,
   },
 
   "&:nth-child(2)": {
     opacity: 0,
-    animation: `0.5s ease 1.4s ${fadeInTop} forwards`,
+    animation: `0.5s ease 0.8s ${fadeInTop} forwards`,
   },
 
   "&:nth-child(3)": {
     opacity: 0,
-    animation: `0.5s ease 1.6s ${fadeInTop} forwards`,
+    animation: `0.5s ease 1s ${fadeInTop} forwards`,
   },
 });
 
 export const PageCount = styled("div", {
   color: "$gray400",
-  marginTop: "$4",
-  position: "absolute",
+  marginTop: "$2",
 
   fontSize: "$lg",
 
   opacity: 0,
-  animation: `0.5s ease 0.8s ${fadeIn} forwards`,
+  animation: `0.5s ease 0.3s ${fadeIn} forwards`,
 
   "@md": {
     fontSize: "$2xl",
-    marginTop: "$8",
+    marginTop: "$4",
   },
 });

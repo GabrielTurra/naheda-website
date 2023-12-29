@@ -1,3 +1,15 @@
+// External Dependencies
+import React, { useState } from "react";
+import Image from "next/image";
+
+// Internal Dependencies
+import { Col, Container, Row } from "@/src/styles/grid";
+import { Button } from "../lib/button";
+
+// Typings
+import { BannerCarouselProps } from "./BannerCarousel.types";
+
+// Styles
 import {
   BannerCarouselComponent,
   BannerTitle,
@@ -11,16 +23,6 @@ import {
   ItemOverlay,
   TextTopic,
 } from "./BannerCarousel.styles";
-import { BannerCarouselProps } from "./BannerCarousel.types";
-
-import Image from "next/image";
-import { Col, Container, Row } from "@/src/styles/grid";
-
-import "swiper/css";
-import "swiper/css/thumbs";
-import "swiper/css/free-mode";
-import { Button } from "../lib/button";
-import { useState } from "react";
 
 export const BannerCarousel: React.FC<BannerCarouselProps> = ({
   itemsCarousel,
@@ -51,13 +53,14 @@ export const BannerCarousel: React.FC<BannerCarouselProps> = ({
         <Container>
           <Row>
             <BannerContent size={12} xl={8} className="">
-              <Row className="align-center pt-16 pt-xl-0">
+              <Row className="align-center pt-30 pt-xl-16 border-box">
                 <div>
                   <BannerTitle key={`title-key-${itemSource}`}>
                     {itemsCarousel[itemSource].title}
                   </BannerTitle>
                   <Button
                     key={`button-key-${itemSource}`}
+                    cta={itemsCarousel[itemSource].cta}
                     text="Faça seu orçamento!"
                   />
                   <PageCount key={`pageCount-key-${itemSource}`}>
@@ -69,7 +72,7 @@ export const BannerCarousel: React.FC<BannerCarouselProps> = ({
               </Row>
             </BannerContent>
             <BannerInfo size={12} xl={4}>
-              <Row className="content-center text-white">
+              <Row className="content-end text-white">
                 <Col size={12}>
                   <h2 key={`subtitle-key-${itemSource}`}>
                     {itemsCarousel[itemSource].subtitle}

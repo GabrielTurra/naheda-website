@@ -13,7 +13,7 @@ const HomeLayoutStaticData = {
     itemsCarousel: [
       {
         id: 1,
-        title: "As melhores resistências do mercado!",
+        title: "A melhor opção em aquecimento industrial!",
         subtitle: "Lorem Ipsum Subtitle",
         content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Dolorem, qui ipsa et repellendus magni natus accusamus rem
@@ -21,10 +21,14 @@ const HomeLayoutStaticData = {
                   quisquam asperiores possimus a fugit hic fugiat.`,
         image: BannerImage1,
         topic: "Resistências",
+        cta: {
+          text: "Entre em contato!",
+          url: "/",
+        },
       },
       {
         id: 2,
-        title: "A melhor opção em elétrica industrial!",
+        title: "Conheça nossa linha residencial!",
         subtitle: "Lorem Ipsum Subtitle",
         content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                   Dolorem, qui ipsa et repellendus magni natus accusamus rem
@@ -32,6 +36,10 @@ const HomeLayoutStaticData = {
                   quisquam asperiores possimus a fugit hic fugiat.`,
         image: BannerImage2,
         topic: "Elétrica",
+        cta: {
+          text: "Faça seu orçamento!",
+          url: "/",
+        },
       },
       {
         id: 3,
@@ -43,6 +51,10 @@ const HomeLayoutStaticData = {
                   quisquam asperiores possimus a fugit hic fugiat.`,
         image: BannerImage3,
         topic: "A Fábrica",
+        cta: {
+          text: "Veja os detalhes!",
+          url: "/",
+        },
       },
     ],
   } as BannerCarouselProps,

@@ -35,7 +35,7 @@ export const ButtonComponent = styled("button", {
 
   "@md": {
     padding: "$4 $10",
-    fontSize: "$4xl",
+    fontSize: "$3xl",
   },
 
   "&:before, &:after": {
@@ -43,11 +43,11 @@ export const ButtonComponent = styled("button", {
     transition: "0.3s ease",
     content: "",
     position: "absolute",
-    zIndex: -1,
     top: 0,
     bottom: 0,
     transform: "skewX(45deg)",
     width: "175%",
+    zIndex: 1,
   },
 
   "&:before": {
@@ -60,6 +60,8 @@ export const ButtonComponent = styled("button", {
   span: {
     marginLeft: "0 !important",
     color: "$white !important",
+    zIndex: 2,
+    position: "relative",
   },
 
   "&:hover": {

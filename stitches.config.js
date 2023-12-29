@@ -55,7 +55,10 @@ export const {
     fontSizes,
     fontWeights,
     radii,
-    space,
+    space: {
+      ...space,
+      section: space[16],
+    },
     utils,
   },
   media: breakpoints,

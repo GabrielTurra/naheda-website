@@ -62,6 +62,15 @@ export const Container = styled("div", {
   "@xxl": {
     maxWidth: "1600px",
   },
+
+  variants: {
+    fluid: {
+      true: {
+        maxWidth: "100%",
+        margin: "0",
+      },
+    },
+  },
 });
 
 export const Row = styled("div", {
@@ -76,6 +85,10 @@ export const Row = styled("div", {
 
   "&.content-center": {
     alignContent: "center",
+  },
+
+  "&.content-end": {
+    alignContent: "end",
   },
 });
 

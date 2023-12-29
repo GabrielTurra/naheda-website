@@ -4,6 +4,11 @@ import { globalClasses } from "./classes";
 export const globalStyles = globalCss({
   ...globalClasses,
 
+  ".global-section": {
+    paddingTop: "$section !important",
+    paddingBottom: "$section !important",
+  },
+
   "::selection": {
     color: "$white",
     background: "$secondary",
@@ -12,6 +17,7 @@ export const globalStyles = globalCss({
   "*": {
     margin: 0,
     padding: 0,
+    boxSizing: "border-box",
   },
 
   body: {
@@ -75,10 +81,15 @@ export const globalStyles = globalCss({
     fontFamily: "$body",
     fontSize: "$sm",
     lineHeight: "160%",
+    margin: "$4 0",
 
     "@md": {
       fontSize: "$lg",
     },
+  },
+
+  "p + p": {
+    margin: "0 0 $4",
   },
 
   label: {
