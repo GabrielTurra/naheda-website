@@ -2,7 +2,7 @@
 import Image from "next/image";
 
 // Internal Dependencies
-import { Button } from "../lib/button";
+import { Button } from "../lib";
 import { Container, Row } from "@/src/styles/grid";
 
 // Typings
@@ -16,11 +16,14 @@ import {
   InfoSubtitle,
 } from "./ImageDescription.styles";
 
-// Example Static Content
-import BannerImage1 from "@/public/example/example-image-03.jpg";
-import BannerImage2 from "@/public/example/example-image-01.jpg";
-
-export const ImageDescription: React.FC<ImageDescriptionProps> = () => {
+export const ImageDescription: React.FC<ImageDescriptionProps> = ({
+  title,
+  subtitle,
+  text,
+  cta,
+  firstImage,
+  secondImage,
+}) => {
   return (
     <ImageDescriptionComponent className="global-section">
       <Container>
@@ -28,43 +31,28 @@ export const ImageDescription: React.FC<ImageDescriptionProps> = () => {
           <ImageContainer className="mb-6 mb-xl-0" size={12} xl={6}>
             <div>
               <Image
-                src={BannerImage1.src}
-                width={BannerImage1.width}
-                height={BannerImage1.height}
+                src={firstImage.src}
+                width={firstImage.width}
+                height={firstImage.height}
                 alt=""
               />
             </div>
             <div>
               <Image
-                src={BannerImage2.src}
-                width={BannerImage2.width}
-                height={BannerImage2.height}
+                src={secondImage.src}
+                width={secondImage.width}
+                height={secondImage.height}
                 alt=""
               />
             </div>
           </ImageContainer>
           <InfoContainer size={12} xl={6}>
             <Row>
-              <InfoSubtitle>Nossos serviços</InfoSubtitle>
-              <h2 className="h2">
-                Fabricamos todos os tipos de resistências industriais!
-              </h2>
+              <InfoSubtitle>{subtitle}</InfoSubtitle>
+              <h2 className="h2">{title}</h2>
+              <p>{text}</p>
 
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-                dolorem est nostrum asperiores odio dolores voluptas iusto nemo,
-                optio nam eius veniam soluta, quibusdam commodi minus animi
-                provident placeat inventore tempora possimus voluptates alias.
-                Repellat, saepe! Quasi iusto, velit dolorum laboriosam id neque.
-                Voluptatem repudiandae dolorem aliquid blanditiis ullam.
-              </p>
-
-              <Button
-                cta={{
-                  text: "Faça seu orçamento!",
-                  url: "/",
-                }}
-              />
+              <Button cta={cta} />
             </Row>
           </InfoContainer>
         </Row>

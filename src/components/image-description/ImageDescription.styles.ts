@@ -4,7 +4,7 @@ import CogsPattern from "@/public/patterns/floating-cogs.svg";
 import { fadeInTop } from "@/src/styles/animations";
 
 export const ImageDescriptionComponent = styled("div", {
-  backgroundImage: `linear-gradient(rgba(255,255,255, 1), rgba(255,255,255,0.85), rgba(255,255,255,1)), url(${CogsPattern.src});`,
+  backgroundImage: `linear-gradient(rgba(255,255,255, 1), rgba(255,255,255,0.8)), url(${CogsPattern.src});`,
 });
 
 export const ImageContainer = styled(Col, {

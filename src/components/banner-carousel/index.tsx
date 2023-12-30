@@ -4,7 +4,7 @@ import Image from "next/image";
 
 // Internal Dependencies
 import { Col, Container, Row } from "@/src/styles/grid";
-import { Button } from "../lib/button";
+import { Button } from "../lib";
 
 // Typings
 import { BannerCarouselProps } from "./BannerCarousel.types";
@@ -61,7 +61,6 @@ export const BannerCarousel: React.FC<BannerCarouselProps> = ({
                   <Button
                     key={`button-key-${itemSource}`}
                     cta={itemsCarousel[itemSource].cta}
-                    text="Faça seu orçamento!"
                   />
                   <PageCount key={`pageCount-key-${itemSource}`}>
                     <span>
