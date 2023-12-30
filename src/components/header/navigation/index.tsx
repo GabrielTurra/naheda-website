@@ -7,7 +7,7 @@ import {
 } from "../header.styles";
 import { HeaderNavigationProps } from "../header.types";
 
-import { FaXmark, FaBarsStaggered } from "react-icons/fa6";
+import { AnimatedHamburguer } from "../animated-hamburguer";
 
 const HeaderNavigation: React.FC<HeaderNavigationProps> = () => {
   const controlCollapsible = useCollapsiblenavigation();
@@ -22,10 +22,6 @@ const HeaderNavigation: React.FC<HeaderNavigationProps> = () => {
       </NavigationComponent>
 
       <CollapsibleNavigation isOpen={controlCollapsible.isOpen}>
-        <FaXmark
-          size={25}
-          onClick={() => controlCollapsible.closeCollapsiblenavigation()}
-        />
         <ul>
           <li>Para Industria</li>
           <li>Para Residência</li>
@@ -39,9 +35,9 @@ const HeaderNavigation: React.FC<HeaderNavigationProps> = () => {
         onClick={() => controlCollapsible.closeCollapsiblenavigation()}
       />
 
-      <FaBarsStaggered
+      <AnimatedHamburguer
+        checked={controlCollapsible.isOpen}
         onClick={() => controlCollapsible.toggleCollapsiblenavigation()}
-        size={25}
       />
     </NavigationContent>
   );

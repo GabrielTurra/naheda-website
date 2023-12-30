@@ -1,4 +1,4 @@
-import { Row } from "@/src/styles/grid";
+import { Container, Row } from "@/src/styles/grid";
 import { styled } from "@/stitches.config";
 import { fadeIn, fadeInTop } from "@/src/styles/animations";
 import Image from "next/image";
@@ -110,15 +110,27 @@ export const CollapsibleNavigation = styled("div", {
   background: "$primary",
   zIndex: 2,
 
-  width: "400px",
-  maxWidth: "80%",
+  width: "100%",
+  maxWidth: "100%",
   height: "100%",
 
   position: "fixed",
-  right: "-400px",
+  left: "-100%",
   top: 0,
 
+  paddingTop: "130px",
+
+  transformOrigin: "0 0",
   transition: "all .3s ease",
+
+  "@md": {
+    width: "400px",
+    maxWidth: "400px",
+  },
+
+  "@lg": {
+    display: "none",
+  },
 
   svg: {
     color: "$white",
@@ -140,6 +152,12 @@ export const CollapsibleNavigation = styled("div", {
       padding: "30px",
       transition: "all .3s ease",
       cursor: "pointer",
+      textAlign: "right",
+      fontSize: "$xl",
+
+      "@md": {
+        fontSize: "$2xl",
+      },
 
       "&:hover": {
         background: "rgba(255, 255, 255, 0.2)",
@@ -151,7 +169,9 @@ export const CollapsibleNavigation = styled("div", {
     isOpen: {
       true: {
         zIndex: 2,
-        right: 0,
+        left: 0,
+
+        transform: "skew(-12deg)",
       },
     },
   },
