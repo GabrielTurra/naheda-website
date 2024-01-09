@@ -9,10 +9,9 @@ export const DoubleSelectorComponent = styled("div", {
 export const SelectorCol = styled(Col, {
   overflow: "hidden",
   height: "300px",
-  transition: "all 0.3s ease",
+  transition: "all 0.3s linear",
   position: "relative",
   cursor: "pointer",
-  transformOrigin: "0 0",
 
   "&:hover": {
     flex: "0 0 75%",
@@ -35,7 +34,6 @@ export const SelectorCol = styled(Col, {
     height: "100%",
     filter: "brightness(55%) grayscale(60%)",
     top: 0,
-    transition: "all 0.3s ease",
   },
 });
 

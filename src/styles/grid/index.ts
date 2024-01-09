@@ -84,6 +84,10 @@ export const Row = styled("div", {
     alignItems: "center",
   },
 
+  "&.justify-center": {
+    justifyContent: "center",
+  },
+
   "&.content-center": {
     alignContent: "center",
   },

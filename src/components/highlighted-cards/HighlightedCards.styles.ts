@@ -1,4 +1,5 @@
 import { fadeInBottom, fadeInTop } from "@/src/styles/animations";
+import { Col } from "@/src/styles/grid";
 import { styled } from "@/stitches.config";
 
 export const HighlightedCardsComponent = styled("div", {
@@ -101,6 +102,61 @@ export const Card = styled("div", {
     objectFit: "cover",
     filter: "brightness(55%) grayscale(60%)",
     transition: "all 0.3s ease",
+
+    zIndex: 1,
+  },
+});
+
+export const HighlightedItem = styled(Col, {
+  textAlign: "center",
+  position: "relative",
+  height: "240px",
+
+  "&:not(:last-child):before": {
+    content: "",
+    position: "absolute",
+    bottom: "5%",
+    width: "60%",
+    height: "1px",
+    background: "$white",
+    opacity: 0.4,
+    left: "20%",
+
+    "@lg": {
+      width: "1px",
+      height: "40%",
+      top: "30%",
+      right: 0,
+      bottom: "unset",
+      left: "unset",
+    },
+  },
+
+  h4: {
+    position: "absolute",
+    zIndex: 2,
+    display: "block",
+
+    color: "$white",
+    fontFamily: "$body",
+
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+  },
+
+  span: {
+    display: "block",
+    position: "absolute",
+    fontSize: "16rem",
+
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+
+    opacity: 0.4,
+    color: "$gray400",
+    fontFamily: "$title",
 
     zIndex: 1,
   },

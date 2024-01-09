@@ -49,7 +49,7 @@ export const ImageContainer = styled(Container, {
     filter: "brightness(55%)",
     top: 0,
 
-    animation: `0.7s ${enterToRight} forwards`,
+    animation: `0.5s ${enterToRight} forwards`,
   },
 
   "[class*='-size-12']": {

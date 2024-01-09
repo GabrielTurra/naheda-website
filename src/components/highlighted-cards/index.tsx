@@ -2,6 +2,7 @@ import { Col, Container, Row } from "@/src/styles/grid";
 import {
   Card,
   HighlightedCardsComponent,
+  HighlightedItem,
   TextCard,
 } from "./HighlightedCards.styles";
 import { HighlightedCardsProps } from "./HighlightedCards.types";
@@ -64,6 +65,21 @@ export const HighlightedCards: React.FC<HighlightedCardsProps> = () => {
               </Card>
             </Col>
           ))}
+        </Row>
+
+        <Row className="justify-center">
+          <HighlightedItem size={12} lg={4} xl={3}>
+            <h4>Lorem ipsum dolor.</h4>
+            <span>98</span>
+          </HighlightedItem>
+          <HighlightedItem size={12} lg={4} xl={3}>
+            <h4>Lorem ipsum dolor.</h4>
+            <span>98</span>
+          </HighlightedItem>
+          <HighlightedItem size={12} lg={4} xl={3}>
+            <h4>Lorem ipsum dolor.</h4>
+            <span>98</span>
+          </HighlightedItem>
         </Row>
       </Container>
     </HighlightedCardsComponent>
