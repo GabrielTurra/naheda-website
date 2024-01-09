@@ -1,8 +1,8 @@
-import { Container, Row } from "@/src/styles/grid";
+import { Row } from "@/src/styles/grid";
 import {
+  ContentSection,
   DoubleSelectorComponent,
   SelectorCol,
-  SelectorTitle,
 } from "./DoubleSelector.styles";
 import { DoubleSelectorProps } from "./DoubleSelector.types";
 import Image from "next/image";
@@ -16,7 +16,10 @@ export const DoubleSelector: React.FC<DoubleSelectorProps> = () => {
       <div>
         <Row>
           <SelectorCol>
-            <SelectorTitle>Linha Industrial</SelectorTitle>
+            <ContentSection>
+              <h2>Linha Industrial</h2>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            </ContentSection>
             <Image
               src={Image1.src}
               width={Image1.width}
@@ -25,7 +28,10 @@ export const DoubleSelector: React.FC<DoubleSelectorProps> = () => {
             />
           </SelectorCol>
           <SelectorCol>
-            <SelectorTitle>Linha Residencial</SelectorTitle>
+            <ContentSection>
+              <h2>Linha Residencial</h2>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            </ContentSection>
             <Image
               src={Image2.src}
               width={Image2.width}

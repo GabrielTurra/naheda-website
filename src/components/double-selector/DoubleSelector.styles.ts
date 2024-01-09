@@ -1,3 +1,4 @@
+import { fadeInTop } from "@/src/styles/animations";
 import { Col } from "@/src/styles/grid";
 import { styled } from "@/stitches.config";
 
@@ -13,28 +14,18 @@ export const SelectorCol = styled(Col, {
   cursor: "pointer",
   transformOrigin: "0 0",
 
-  "&:nth-child(1)": {
-    borderRight: "3px solid $primary",
-
-    "@lg": {
-      borderRight: "7px solid $primary",
-    },
-  },
-
-  "&:nth-child(2)": {
-    borderLeft: "3px solid $primary",
-
-    "@lg": {
-      borderLeft: "7px solid $primary",
-    },
-  },
-
   "&:hover": {
     flex: "0 0 75%",
     maxWidth: "75%",
 
     img: {
       filter: "brightness(70%) grayscale(0%)",
+    },
+
+    p: {
+      "@md": {
+        display: "block",
+      },
     },
   },
 
@@ -48,14 +39,26 @@ export const SelectorCol = styled(Col, {
   },
 });
 
-export const SelectorTitle = styled("h2", {
+export const ContentSection = styled("div", {
   position: "absolute",
-  color: "$white",
-  textAlign: "center",
 
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
 
   zIndex: 3,
+
+  h2: {
+    color: "$white",
+    textAlign: "center",
+  },
+
+  p: {
+    color: "$white",
+    textAlign: "center",
+    display: "none",
+    opacity: 0,
+
+    animation: `0.3s ease ${fadeInTop} forwards`,
+  },
 });
