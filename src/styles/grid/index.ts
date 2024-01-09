@@ -68,6 +68,7 @@ export const Container = styled("div", {
       true: {
         maxWidth: "100%",
         margin: "0",
+        width: "100%",
       },
     },
   },
