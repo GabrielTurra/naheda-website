@@ -4,6 +4,14 @@ import { styled } from "@/stitches.config";
 
 export const DoubleSelectorComponent = styled("div", {
   background: "$primary",
+
+  "&:hover": {
+    "> div": {
+      h2: {
+        opacity: 0,
+      },
+    },
+  },
 });
 
 export const SelectorCol = styled(Col, {
@@ -13,9 +21,17 @@ export const SelectorCol = styled(Col, {
   position: "relative",
   cursor: "pointer",
 
+  h2: {
+    transition: "all 0.3s linear",
+  },
+
   "&:hover": {
-    flex: "0 0 75%",
-    maxWidth: "75%",
+    flex: "0 0 65%",
+    maxWidth: "65%",
+
+    h2: {
+      opacity: "1 !important",
+    },
 
     img: {
       filter: "brightness(70%) grayscale(0%)",
@@ -49,6 +65,11 @@ export const ContentSection = styled("div", {
   h2: {
     color: "$white",
     textAlign: "center",
+    fontSize: "$5xl",
+
+    "@md": {
+      fontSize: "$7xl",
+    },
   },
 
   p: {

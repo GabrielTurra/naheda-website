@@ -18,7 +18,7 @@ export const Icon = styled(Image, {
 });
 
 export const ButtonComponent = styled("button", {
-  all: "unset",
+  border: "none",
 
   background: "",
   boxSizing: "border-box",
@@ -98,6 +98,19 @@ export const ButtonComponent = styled("button", {
 
         "&:hover": {
           background: "$green900",
+        },
+      },
+      secondary: {
+        "&:hover": {
+          background: "$white",
+
+          span: {
+            color: "$primary !important",
+          },
+        },
+
+        "&:before, &:after": {
+          background: "$secondary",
         },
       },
     },

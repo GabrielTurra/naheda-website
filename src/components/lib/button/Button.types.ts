@@ -4,7 +4,7 @@ import { LinkProps } from "@/src/@types/LinkProps";
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   cta: LinkProps;
-  color?: "white" | "green";
+  color?: "white" | "green" | "secondary";
   sizeWidth?: "small" | "big" | "full";
   icon?: StaticImageData;
   onlyIcon?: boolean;

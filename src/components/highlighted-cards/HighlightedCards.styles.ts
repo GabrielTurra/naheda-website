@@ -8,8 +8,11 @@ export const HighlightedCardsComponent = styled("div", {
 
   h2: {
     color: "$white",
-    maxWidth: "70%",
     margin: "0 auto",
+
+    "@xl": {
+      maxWidth: "50%",
+    },
   },
 
   p: {
@@ -57,13 +60,17 @@ export const TextCard = styled("div", {
 });
 
 export const Card = styled("div", {
-  height: "400px",
+  height: "270px",
   position: "relative",
   cursor: "pointer",
 
+  "@lg": {
+    height: "400px",
+  },
+
   "&:hover": {
     img: {
-      filter: "brightness(65%) grayscale(0%)",
+      filter: "brightness(40%) grayscale(60%)",
     },
 
     span: {
@@ -100,7 +107,7 @@ export const Card = styled("div", {
     height: "100%",
 
     objectFit: "cover",
-    filter: "brightness(55%) grayscale(60%)",
+    filter: "brightness(80%) grayscale(0%)",
     transition: "all 0.3s ease",
 
     zIndex: 1,
@@ -154,8 +161,8 @@ export const HighlightedItem = styled(Col, {
     left: "50%",
     transform: "translate(-50%, -50%)",
 
-    opacity: 0.4,
-    color: "$gray400",
+    opacity: 0.2,
+    color: "$gray300",
     fontFamily: "$title",
 
     zIndex: 1,
