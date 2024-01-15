@@ -8,7 +8,7 @@ export const ImageCardList: React.FC<ImageCardListProps> = ({ cards }) => {
     <ImageCardListComponent>
       <Row>
         {cards.map((cardData) => (
-          <Col size={3}>
+          <Col size={6} xl={3}>
             <ImageCard {...cardData} />
           </Col>
         ))}

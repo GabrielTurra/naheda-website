@@ -13,11 +13,9 @@ export const HomeLayoutStaticData = {
       {
         id: 1,
         title: "A melhor opção em aquecimento industrial!",
-        subtitle: "Lorem Ipsum Subtitle",
-        content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Dolorem, qui ipsa et repellendus magni natus accusamus rem
-                  consectetur, corporis eligendi architecto alias debitis
-                  quisquam asperiores possimus a fugit hic fugiat.`,
+        subtitle: "Inovação em Resistências Elétricas",
+        content:
+          "Explore o calor da inovação! Nossa fábrica é referência em resistências elétricas industriais, aquecendo seu sucesso com soluções personalizadas. Eficiência térmica que impulsiona seu negócio!",
         image: BannerImage1,
         topic: "Resistências",
         cta: {
@@ -28,11 +26,9 @@ export const HomeLayoutStaticData = {
       {
         id: 2,
         title: "Conheça nossa linha residencial!",
-        subtitle: "Lorem Ipsum Subtitle",
-        content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Dolorem, qui ipsa et repellendus magni natus accusamus rem
-                  consectetur, corporis eligendi architecto alias debitis
-                  quisquam asperiores possimus a fugit hic fugiat.`,
+        subtitle: "Soluções Elétricas para você!",
+        content:
+          "Facilite seu dia a dia com nossa linha de equipamentos elétricos residenciais. Das resistências aos pequenos detalhes, proporcionamos soluções simples para tornar sua vida mais prática e confortável.",
         image: BannerImage2,
         topic: "Elétrica",
         cta: {
@@ -43,11 +39,9 @@ export const HomeLayoutStaticData = {
       {
         id: 3,
         title: "Conheça a nossa fábrica!",
-        subtitle: "Lorem Ipsum Subtitle",
-        content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Dolorem, qui ipsa et repellendus magni natus accusamus rem
-                  consectetur, corporis eligendi architecto alias debitis
-                  quisquam asperiores possimus a fugit hic fugiat.`,
+        subtitle: "Aquecendo a Inovação Industrial",
+        content:
+          "Bem-vindo à nossa fábrica de excelência em resistências elétricas industriais. Deixe-nos aquecer o caminho para o sucesso da sua produção com inovação e qualidade líderes no mercado.",
         image: BannerImage3,
         topic: "A Fábrica",
         cta: {
@@ -60,12 +54,7 @@ export const HomeLayoutStaticData = {
   imageDescription: {
     title: "Fabricamos todos os tipos de resistências industriais!",
     subtitle: "Nossos serviços",
-    text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-            dolorem est nostrum asperiores odio dolores voluptas iusto nemo,
-            optio nam eius veniam soluta, quibusdam commodi minus animi
-            provident placeat inventore tempora possimus voluptates alias.
-            Repellat, saepe! Quasi iusto, velit dolorum laboriosam id neque.
-            Voluptatem repudiandae dolorem aliquid blanditiis ullam.`,
+    text: "Com anos de experiência e comprometimento com a qualidade, nossa fábrica de resistências industriais destaca-se pela precisão e durabilidade de nossos produtos. Cada resistência é cuidadosamente projetada para atender às demandas específicas da sua indústria, proporcionando desempenho consistente e eficaz. Conte conosco para elevar a eficiência térmica do seu processo produtivo, enquanto oferecemos suporte técnico especializado para garantir a máxima satisfação do cliente.",
     cta: {
       text: "Faça seu orçamento!",
       url: "/",
@@ -78,7 +67,7 @@ export const HomeLayoutStaticData = {
       {
         title: "Linha Industrial",
         description:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+          "Inovação térmica industrial: Eficiência energética em cada detalhe.",
         image: BannerImage1,
         cta: {
           text: "Faça seu Orçamento!",
@@ -88,7 +77,7 @@ export const HomeLayoutStaticData = {
       {
         title: "Linha Residencial",
         description:
-          "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+          "Conforto elétrico residencial: Soluções simples para o seu dia a dia.",
         image: BannerImage2,
         cta: {
           text: "Faça seu Orçamento!",
@@ -100,7 +89,7 @@ export const HomeLayoutStaticData = {
   highlightedCards: {
     title: "Nossos produtos",
     subtitle:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis harum eos!",
+      "Poder Térmico Personalizado: Resistências Industriais e Residenciais de Alta Performance.",
 
     cards: [
       {
@@ -127,16 +116,16 @@ export const HomeLayoutStaticData = {
 
     counters: [
       {
-        count: 98,
-        description: "Lorem ipsum dolor.",
+        count: 8,
+        description: "Anos de mercado",
       },
       {
-        count: 33,
-        description: "Lorem ipsum dolor.",
+        count: 82,
+        description: "Tipos de resistência",
       },
       {
-        count: 47,
-        description: "Lorem ipsum dolor.",
+        count: 64,
+        description: "Clientes ativos",
       },
     ],
 

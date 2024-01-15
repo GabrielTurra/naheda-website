@@ -9,11 +9,6 @@ export const globalStyles = globalCss({
     paddingBottom: "$section !important",
   },
 
-  "::selection": {
-    color: "$white",
-    background: "$secondary",
-  },
-
   "*": {
     margin: 0,
     padding: 0,
