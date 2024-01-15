@@ -3,6 +3,9 @@ import { HomeLayoutContentProps } from "@/src/layouts/home/HomeLayout.types";
 import BannerImage1 from "@/public/example/example-image-04.jpg";
 import BannerImage2 from "@/public/example/example-image-05.jpg";
 import BannerImage3 from "@/public/example/example-image-06.jpg";
+import BannerImage4 from "@/public/example/example-image-03.jpg";
+import BannerImage5 from "@/public/example/example-image-02.jpg";
+import BannerImage6 from "@/public/example/example-image-01.jpg";
 
 export const HomeLayoutStaticData = {
   banner: {
@@ -69,5 +72,117 @@ export const HomeLayoutStaticData = {
     },
     firstImage: BannerImage1,
     secondImage: BannerImage2,
+  },
+  doubleSelector: {
+    items: [
+      {
+        title: "Linha Industrial",
+        description:
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        image: BannerImage1,
+        cta: {
+          text: "Faça seu Orçamento!",
+          url: "/",
+        },
+      },
+      {
+        title: "Linha Residencial",
+        description:
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit.",
+        image: BannerImage2,
+        cta: {
+          text: "Faça seu Orçamento!",
+          url: "/",
+        },
+      },
+    ],
+  },
+  highlightedCards: {
+    title: "Nossos produtos",
+    subtitle:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis harum eos!",
+
+    cards: [
+      {
+        title: "Coleiras",
+        category: "Resistências",
+        image: BannerImage1,
+      },
+      {
+        title: "Coleiras",
+        category: "Resistências",
+        image: BannerImage2,
+      },
+      {
+        title: "Coleiras",
+        category: "Resistências",
+        image: BannerImage3,
+      },
+      {
+        title: "Coleiras",
+        category: "Resistências",
+        image: BannerImage4,
+      },
+    ],
+
+    counters: [
+      {
+        count: 98,
+        description: "Lorem ipsum dolor.",
+      },
+      {
+        count: 33,
+        description: "Lorem ipsum dolor.",
+      },
+      {
+        count: 47,
+        description: "Lorem ipsum dolor.",
+      },
+    ],
+
+    cta: {
+      text: "Faça seu Orçamento!",
+      url: "/",
+    },
+  },
+  imageCardList: {
+    cards: [
+      {
+        title: "Pátio da Fábrica",
+        subtitle: "Nossa linha de produção",
+        image: BannerImage6,
+        cta: {
+          text: "Faça seu Orçamento!",
+          url: "/",
+        },
+      },
+      {
+        title: "Pátio da Fábrica",
+        subtitle: "Nossa linha de produção",
+        image: BannerImage5,
+        cta: {
+          text: "Faça seu Orçamento!",
+          url: "/",
+        },
+      },
+      {
+        title: "Pátio da Fábrica",
+        subtitle: "Nossa linha de produção",
+        image: BannerImage4,
+        cta: {
+          text: "Faça seu Orçamento!",
+          url: "/",
+        },
+      },
+      {
+        title: "Pátio da Fábrica",
+        subtitle: "Nossa linha de produção",
+        image: BannerImage5,
+        cta: {
+          text: "Faça seu Orçamento!",
+          url: "/",
+        },
+      },
+    ],
   },
 } as HomeLayoutContentProps;

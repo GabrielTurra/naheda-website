@@ -1,6 +1,5 @@
+import { LinkProps } from "@/src/@types/LinkProps";
 import { StaticImageData } from "next/image";
-
-export interface HighlightedCardsProps {}
 
 export interface HighlightedImageCardProps {
   count: string;
@@ -12,4 +11,12 @@ export interface HighlightedImageCardProps {
 export interface HighlightedCounterItemProps {
   count: number;
   description: string;
+}
+
+export interface HighlightedCardsProps {
+  title: string;
+  subtitle: string;
+  cards: HighlightedImageCardProps[];
+  counters: HighlightedCounterItemProps[];
+  cta: LinkProps;
 }
