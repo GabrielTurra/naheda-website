@@ -2,6 +2,7 @@ import React from "react";
 import { Content, PageComponent } from "./Page.styles";
 import { PageProps } from "./Page.types";
 import { Header } from "@/src/components/header";
+import { Footer } from "../../footer";
 
 export const Page = React.forwardRef<HTMLDivElement, PageProps>(
   ({ children }, forwardedRef) => {
@@ -11,7 +12,7 @@ export const Page = React.forwardRef<HTMLDivElement, PageProps>(
         <Content id="content" tabIndex={0}>
           {children}
         </Content>
-        {/* <Footer /> */}
+        <Footer />
       </PageComponent>
     );
   },

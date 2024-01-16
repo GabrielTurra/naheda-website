@@ -23,20 +23,14 @@ export const CollapsiblenavigationProvider: React.FC<
 
   const openCollapsiblenavigation = useCallback(() => {
     setIsOpen(true);
-    document.body.style.overflowY = "hidden";
   }, []);
 
   const closeCollapsiblenavigation = useCallback(() => {
     setIsOpen(false);
-    document.body.style.overflowY = "auto";
   }, []);
 
   const toggleCollapsiblenavigation = useCallback(() => {
     setIsOpen((prevsOpen) => !prevsOpen);
-
-    document.body.style.overflowY === "auto"
-      ? (document.body.style.overflowY = "hidden")
-      : (document.body.style.overflowY = "auto");
   }, []);
 
   return (

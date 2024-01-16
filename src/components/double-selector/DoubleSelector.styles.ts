@@ -26,8 +26,13 @@ export const SelectorCol = styled(Col, {
   },
 
   "&:hover": {
-    flex: "0 0 65%",
-    maxWidth: "65%",
+    flex: "0 0 85%",
+    maxWidth: "85%",
+
+    "@md": {
+      flex: "0 0 65%",
+      maxWidth: "65%",
+    },
 
     h2: {
       opacity: "1 !important",

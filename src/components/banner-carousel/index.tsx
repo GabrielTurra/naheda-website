@@ -98,7 +98,7 @@ export const BannerCarousel: React.FC<BannerCarouselProps> = ({
                         <ItemOverlay />
                         <TextTopic>
                           <h3>{bannerItem.topic}</h3>
-                          <p>{bannerItem.subtitle}</p>
+                          {/* <p>{bannerItem.subtitle}</p> */}
                         </TextTopic>
                       </BannerItem>
                     ))}

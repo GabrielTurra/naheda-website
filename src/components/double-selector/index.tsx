@@ -16,7 +16,7 @@ export const DoubleSelector: React.FC<DoubleSelectorProps> = ({ items }) => {
             <SelectorCol>
               <ContentSection>
                 <h2>{selectorItemData.title}</h2>
-                <p>{selectorItemData.description}</p>
+                {/* <p>{selectorItemData.description}</p> */}
               </ContentSection>
               <Image
                 src={selectorItemData.image.src}

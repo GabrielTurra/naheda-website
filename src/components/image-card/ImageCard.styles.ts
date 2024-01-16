@@ -12,6 +12,7 @@ export const ImageCardComponent = styled("div", {
     width: "100%",
     height: "100%",
     transition: "all 0.3s ease",
+    filter: "brightness(90%)",
   },
 
   "> div": {
@@ -24,7 +25,7 @@ export const ImageCardComponent = styled("div", {
       marginTop: "-10%",
       width: "120%",
       height: "120%",
-      filter: "brightness(70%) grayscale(30%)",
+      filter: "brightness(70%) grayscale(40%)",
     },
 
     "> div": {

@@ -22,7 +22,6 @@ export const ButtonComponent = styled("button", {
 
   background: "",
   boxSizing: "border-box",
-  padding: "$2 $5",
   cursor: "pointer",
   transition: "all 0.5s ease",
   fontSize: "$2xl",
@@ -33,9 +32,17 @@ export const ButtonComponent = styled("button", {
   position: "relative",
   overflow: "hidden",
 
+  a: {
+    display: "block",
+    textDecoration: "none",
+    padding: "$2 $5",
+  },
+
   "@md": {
-    padding: "$4 $10",
     fontSize: "$3xl",
+    a: {
+      padding: "$4 $10",
+    },
   },
 
   "&:before, &:after": {

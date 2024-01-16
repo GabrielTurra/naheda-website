@@ -1,4 +1,4 @@
-import { Container, Row } from "@/src/styles/grid";
+import { Row } from "@/src/styles/grid";
 import { styled } from "@/stitches.config";
 import { fadeIn, fadeInTop } from "@/src/styles/animations";
 import Image from "next/image";
@@ -170,8 +170,6 @@ export const CollapsibleNavigation = styled("div", {
       true: {
         zIndex: 2,
         left: 0,
-
-        transform: "skew(-12deg)",
       },
     },
   },

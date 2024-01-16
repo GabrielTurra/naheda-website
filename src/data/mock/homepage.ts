@@ -1,11 +1,17 @@
 import { HomeLayoutContentProps } from "@/src/layouts/home/HomeLayout.types";
 
-import BannerImage1 from "@/public/example/example-image-04.jpg";
-import BannerImage2 from "@/public/example/example-image-05.jpg";
-import BannerImage3 from "@/public/example/example-image-06.jpg";
-import BannerImage4 from "@/public/example/example-image-03.jpg";
-import BannerImage5 from "@/public/example/example-image-02.jpg";
-import BannerImage6 from "@/public/example/example-image-01.jpg";
+import BannerImage1 from "@/public/example/example-image-01.jpg";
+import BannerImage2 from "@/public/example/example-image-02.jpg";
+import BannerImage3 from "@/public/example/example-image-03.jpg";
+import BannerImage4 from "@/public/example/example-image-04.jpg";
+import BannerImage5 from "@/public/example/example-image-05.jpg";
+import BannerImage6 from "@/public/example/example-image-06.jpg";
+
+const WhatsappCTA = {
+  text: "Entre em Contato!",
+  url: "https://wa.me/+5511969837062",
+  target: "_blank",
+};
 
 export const HomeLayoutStaticData = {
   banner: {
@@ -13,15 +19,12 @@ export const HomeLayoutStaticData = {
       {
         id: 1,
         title: "A melhor opção em aquecimento industrial!",
-        subtitle: "Inovação em Resistências Elétricas",
+        subtitle: "Inovação em Resistências",
         content:
           "Explore o calor da inovação! Nossa fábrica é referência em resistências elétricas industriais, aquecendo seu sucesso com soluções personalizadas. Eficiência térmica que impulsiona seu negócio!",
-        image: BannerImage1,
+        image: BannerImage4,
         topic: "Resistências",
-        cta: {
-          text: "Entre em contato!",
-          url: "/",
-        },
+        cta: WhatsappCTA,
       },
       {
         id: 2,
@@ -29,12 +32,9 @@ export const HomeLayoutStaticData = {
         subtitle: "Soluções Elétricas para você!",
         content:
           "Facilite seu dia a dia com nossa linha de equipamentos elétricos residenciais. Das resistências aos pequenos detalhes, proporcionamos soluções simples para tornar sua vida mais prática e confortável.",
-        image: BannerImage2,
+        image: BannerImage5,
         topic: "Elétrica",
-        cta: {
-          text: "Faça seu orçamento!",
-          url: "/",
-        },
+        cta: WhatsappCTA,
       },
       {
         id: 3,
@@ -42,12 +42,9 @@ export const HomeLayoutStaticData = {
         subtitle: "Aquecendo a Inovação Industrial",
         content:
           "Bem-vindo à nossa fábrica de excelência em resistências elétricas industriais. Deixe-nos aquecer o caminho para o sucesso da sua produção com inovação e qualidade líderes no mercado.",
-        image: BannerImage3,
+        image: BannerImage6,
         topic: "A Fábrica",
-        cta: {
-          text: "Veja os detalhes!",
-          url: "/",
-        },
+        cta: WhatsappCTA,
       },
     ],
   },
@@ -55,12 +52,9 @@ export const HomeLayoutStaticData = {
     title: "Fabricamos todos os tipos de resistências industriais!",
     subtitle: "Nossos serviços",
     text: "Com anos de experiência e comprometimento com a qualidade, nossa fábrica de resistências industriais destaca-se pela precisão e durabilidade de nossos produtos. Cada resistência é cuidadosamente projetada para atender às demandas específicas da sua indústria, proporcionando desempenho consistente e eficaz. Conte conosco para elevar a eficiência térmica do seu processo produtivo, enquanto oferecemos suporte técnico especializado para garantir a máxima satisfação do cliente.",
-    cta: {
-      text: "Faça seu orçamento!",
-      url: "/",
-    },
-    firstImage: BannerImage1,
-    secondImage: BannerImage2,
+    cta: WhatsappCTA,
+    firstImage: BannerImage4,
+    secondImage: BannerImage5,
   },
   doubleSelector: {
     items: [
@@ -68,21 +62,15 @@ export const HomeLayoutStaticData = {
         title: "Linha Industrial",
         description:
           "Inovação térmica industrial: Eficiência energética em cada detalhe.",
-        image: BannerImage1,
-        cta: {
-          text: "Faça seu Orçamento!",
-          url: "/",
-        },
+        image: BannerImage4,
+        cta: WhatsappCTA,
       },
       {
         title: "Linha Residencial",
         description:
           "Conforto elétrico residencial: Soluções simples para o seu dia a dia.",
-        image: BannerImage2,
-        cta: {
-          text: "Faça seu Orçamento!",
-          url: "/",
-        },
+        image: BannerImage5,
+        cta: WhatsappCTA,
       },
     ],
   },
@@ -93,22 +81,22 @@ export const HomeLayoutStaticData = {
 
     cards: [
       {
-        title: "Coleiras",
+        title: "Coleiras de Mica",
         category: "Resistências",
-        image: BannerImage1,
+        image: BannerImage4,
       },
       {
-        title: "Coleiras",
+        title: "Cartuchos",
         category: "Resistências",
-        image: BannerImage2,
+        image: BannerImage5,
       },
       {
-        title: "Coleiras",
+        title: "Tubulares",
         category: "Resistências",
-        image: BannerImage3,
+        image: BannerImage6,
       },
       {
-        title: "Coleiras",
+        title: "Microtubulares",
         category: "Resistências",
         image: BannerImage4,
       },
@@ -116,61 +104,46 @@ export const HomeLayoutStaticData = {
 
     counters: [
       {
-        count: 8,
+        count: 9,
         description: "Anos de mercado",
+      },
+      {
+        count: 143,
+        description: "Clientes ativos",
       },
       {
         count: 82,
         description: "Tipos de resistência",
       },
-      {
-        count: 64,
-        description: "Clientes ativos",
-      },
     ],
 
-    cta: {
-      text: "Faça seu Orçamento!",
-      url: "/",
-    },
+    cta: WhatsappCTA,
   },
   imageCardList: {
     cards: [
       {
         title: "Pátio da Fábrica",
         subtitle: "Nossa linha de produção",
-        image: BannerImage6,
-        cta: {
-          text: "Faça seu Orçamento!",
-          url: "/",
-        },
+        image: BannerImage1,
+        cta: WhatsappCTA,
       },
       {
         title: "Pátio da Fábrica",
         subtitle: "Nossa linha de produção",
-        image: BannerImage5,
-        cta: {
-          text: "Faça seu Orçamento!",
-          url: "/",
-        },
+        image: BannerImage2,
+        cta: WhatsappCTA,
       },
       {
         title: "Pátio da Fábrica",
         subtitle: "Nossa linha de produção",
-        image: BannerImage4,
-        cta: {
-          text: "Faça seu Orçamento!",
-          url: "/",
-        },
+        image: BannerImage3,
+        cta: WhatsappCTA,
       },
       {
         title: "Pátio da Fábrica",
         subtitle: "Nossa linha de produção",
-        image: BannerImage5,
-        cta: {
-          text: "Faça seu Orçamento!",
-          url: "/",
-        },
+        image: BannerImage1,
+        cta: WhatsappCTA,
       },
     ],
   },
