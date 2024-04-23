@@ -53,7 +53,7 @@ export const BannerCarousel: React.FC<BannerCarouselProps> = ({
         <Container>
           <Row>
             <BannerContent size={12} xl={8} className="">
-              <Row className="align-center pt-30 pt-xl-16 border-box">
+              <Row className="align-center pt-30 pt-xl-0 border-box">
                 <div>
                   <BannerTitle key={`title-key-${itemSource}`}>
                     {itemsCarousel[itemSource].title}
@@ -71,8 +71,8 @@ export const BannerCarousel: React.FC<BannerCarouselProps> = ({
               </Row>
             </BannerContent>
             <BannerInfo size={12} xl={4}>
-              <Row className="content-end text-white">
-                <Col size={12}>
+              <Row className="text-white">
+                <Col size={12} className="self-end">
                   <h2 key={`subtitle-key-${itemSource}`}>
                     {itemsCarousel[itemSource].subtitle}
                   </h2>

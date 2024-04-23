@@ -26,7 +26,7 @@ export const Footer: React.FC<FooterProps> = () => {
           <Col size={12} xl={4} className="my-8 my-xl-0">
             <Row>
               <Col size={12}>
-                <span>Vila Itapoan, 07124460</span>
+                {/* <span>Vila Itapoan, 07124460</span> */}
                 <p>Guarulhos, SP</p>
               </Col>
               <Col size={12} className="my-4">
@@ -34,7 +34,7 @@ export const Footer: React.FC<FooterProps> = () => {
               </Col>
               <Col size={12}>
                 <a href="mailto:vendas@nahedaresistencias.com.br">
-                  vendas@nahedaresistencias.com.br
+                  comercial@nahedaresistencias.com.br
                 </a>
               </Col>
             </Row>
@@ -49,6 +49,7 @@ export const Footer: React.FC<FooterProps> = () => {
           </Col>
         </Row>
       </Container>
+      <div className="bg-black py-2"></div>
     </FooterComponent>
   );
 };

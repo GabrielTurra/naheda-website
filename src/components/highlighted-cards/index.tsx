@@ -22,7 +22,7 @@ export const HighlightedCards: React.FC<HighlightedCardsProps> = ({
 
         <Row className="px-xl-40 global-section">
           {cards.map((cardData, index) => (
-            <Col size={6} xxl={3} className="p-2">
+            <Col size={12} md={6} lg={3} className="p-2">
               <ImageCard
                 {...cardData}
                 count={String(index + 1).padStart(2, "0")}

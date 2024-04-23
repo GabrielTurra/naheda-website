@@ -7,6 +7,10 @@ import BannerImage4 from "@/public/example/example-image-04.jpg";
 import BannerImage5 from "@/public/example/example-image-05.jpg";
 import BannerImage6 from "@/public/example/example-image-06.jpg";
 
+import ColeiraImage from "@/public/products/coleiras.jpg";
+import CartuchoImage from "@/public/products/cartuchos.jpg";
+import TubularImage from "@/public/products/tubulares.jpg";
+
 const WhatsappCTA = {
   text: "Entre em Contato!",
   url: "https://wa.me/+5511969837062",
@@ -29,7 +33,7 @@ export const HomeLayoutStaticData = {
       {
         id: 2,
         title: "Conheça nossa linha residencial!",
-        subtitle: "Soluções Elétricas para você!",
+        subtitle: "Soluções Elétricas personalizadas!",
         content:
           "Facilite seu dia a dia com nossa linha de equipamentos elétricos residenciais. Das resistências aos pequenos detalhes, proporcionamos soluções simples para tornar sua vida mais prática e confortável.",
         image: BannerImage5,
@@ -81,24 +85,24 @@ export const HomeLayoutStaticData = {
 
     cards: [
       {
-        title: "Coleiras de Mica",
+        title: "Coleiras",
         category: "Resistências",
-        image: BannerImage4,
+        image: ColeiraImage,
       },
       {
         title: "Cartuchos",
         category: "Resistências",
-        image: BannerImage5,
+        image: CartuchoImage,
       },
       {
         title: "Tubulares",
         category: "Resistências",
-        image: BannerImage6,
+        image: TubularImage,
       },
       {
         title: "Microtubulares",
         category: "Resistências",
-        image: BannerImage4,
+        image: BannerImage5,
       },
     ],
 

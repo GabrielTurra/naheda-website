@@ -4,6 +4,10 @@ import { globalClasses } from "./classes";
 export const globalStyles = globalCss({
   ...globalClasses,
 
+  ".self-end": {
+    alignSelf: "flex-end",
+  },
+
   ".global-section": {
     paddingTop: "$section !important",
     paddingBottom: "$section !important",
@@ -20,6 +24,7 @@ export const globalStyles = globalCss({
     fontFamily: "$body",
     fontWeight: "$regular",
     color: "$textBase",
+    overflowX: "hidden",
   },
 
   "h1, .h1": {

@@ -3,27 +3,33 @@ import { styled } from "@/stitches.config";
 import { fadeIn, fadeInTop } from "@/src/styles/animations";
 import Image from "next/image";
 
-export const HeaderComponent = styled("div", {
-  width: "100%",
-  height: "150px",
-
-  position: "absolute",
-  top: 0,
-
-  zIndex: "5",
-
-  opacity: 0,
-  animation: `0.5s ease 0.6s ${fadeInTop} forwards`,
-
-  [`${Row}`]: {
-    justifyContent: "space-between",
-    alignItems: "center",
-  },
-});
-
 export const Logo = styled(Image, {
   width: "100px",
   height: "auto",
+});
+
+export const ReturnToTop = styled("button", {
+  position: "fixed",
+  bottom: "50px",
+  right: "50px",
+  backgroundColor: "$white",
+  padding: "15px",
+  border: "2px solid $primary",
+  borderRadius: "8px",
+  color: "$primary",
+  zIndex: 5,
+  cursor: "pointer",
+  display: "none",
+
+  animation: `${fadeIn} 300ms`,
+
+  variants: {
+    isVisible: {
+      true: {
+        display: "block",
+      },
+    },
+  },
 });
 
 export const NavigationContent = styled("div", {
@@ -56,11 +62,18 @@ export const NavigationComponent = styled("ul", {
   li: {
     position: "relative",
     display: "inline-block",
-    padding: "12px",
     color: "$white",
     cursor: "pointer",
     textTransform: "uppercase",
     fontWeight: "bold",
+
+    a: {
+      padding: "12px",
+      display: "block",
+      textDecoration: "none",
+      zIndex: 4,
+      color: "$white",
+    },
 
     "&:before": {
       content: "",
@@ -74,6 +87,7 @@ export const NavigationComponent = styled("ul", {
       transform: "scaleY(2)",
       opacity: 0,
       transition: ".2s",
+      zIndex: -1,
     },
 
     "&:after": {
@@ -92,6 +106,9 @@ export const NavigationComponent = styled("ul", {
 
     "&:hover": {
       color: "$primary",
+      a: {
+        color: "$primary",
+      },
 
       "&:before": {
         transform: "scaleY(1)",
@@ -115,7 +132,7 @@ export const CollapsibleNavigation = styled("div", {
   height: "100%",
 
   position: "fixed",
-  left: "-100%",
+  right: "-100%",
   top: 0,
 
   paddingTop: "130px",
@@ -123,7 +140,12 @@ export const CollapsibleNavigation = styled("div", {
   transformOrigin: "0 0",
   transition: "all .3s ease",
 
-  "@md": {
+  a: {
+    textDecoration: "none",
+    color: "$white",
+  },
+
+  "@sm": {
     width: "400px",
     maxWidth: "400px",
   },
@@ -152,7 +174,6 @@ export const CollapsibleNavigation = styled("div", {
       padding: "30px",
       transition: "all .3s ease",
       cursor: "pointer",
-      textAlign: "right",
       fontSize: "$xl",
 
       "@md": {
@@ -169,7 +190,7 @@ export const CollapsibleNavigation = styled("div", {
     isOpen: {
       true: {
         zIndex: 2,
-        left: 0,
+        right: 0,
       },
     },
   },
@@ -215,5 +236,80 @@ export const AccessibilityButton = styled("button", {
   "&:focus": {
     zIndex: 20,
     opacity: 1,
+  },
+});
+
+export const HeaderComponent = styled("div", {
+  width: "100%",
+  height: "150px",
+
+  position: "absolute",
+  top: 0,
+
+  zIndex: "5",
+
+  opacity: 0,
+  animation: `0.5s ease 0.6s ${fadeInTop} forwards`,
+  transition: "all 0.3s ease",
+
+  [`${Row}`]: {
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+
+  variants: {
+    active: {
+      true: {
+        position: "fixed",
+        height: "100px",
+        background: "$primary",
+        boxShadow: "0px 0px 20px #2F2F2F80",
+
+        [`${Logo}`]: {
+          width: "80px",
+        },
+
+        [`${NavigationContent}`]: {
+          border: "0px",
+        },
+
+        [`${NavigationComponent}`]: {
+          li: {
+            "&:last-child": {
+              "&:before": {
+                transform: "scaleY(1)",
+                opacity: 1,
+                borderTop: "2px solid $white",
+                borderBottom: "2px solid $white",
+              },
+
+              "&:after": {
+                transform: "scaleY(1)",
+                opacity: 1,
+                backgroundColor: "$white",
+              },
+
+              a: {
+                color: "$primary",
+              },
+
+              "&:hover": {
+                a: {
+                  color: "white",
+                },
+                "&:before": {
+                  borderTop: "2px solid $secondary",
+                  borderBottom: "2px solid $secondary",
+                },
+
+                "&:after": {
+                  backgroundColor: "$secondary",
+                },
+              },
+            },
+          },
+        },
+      },
+    },
   },
 });

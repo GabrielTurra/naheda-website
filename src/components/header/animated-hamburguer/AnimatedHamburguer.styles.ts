@@ -12,7 +12,7 @@ export const AnimatedHamburguerComponent = styled("label", {
   },
 
   span: {
-    background: " #fff",
+    background: "#fff",
     borderRadius: "10px",
     height: "4px",
     margin: " 4px 0",

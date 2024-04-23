@@ -25,8 +25,12 @@ export const BannerContent = styled(Col, {
   },
 
   "@xl": {
-    minHeight: "900px",
+    minHeight: "750px",
     paddingTop: "0",
+  },
+
+  "@el": {
+    minHeight: "900px",
   },
 
   button: {
@@ -83,9 +87,13 @@ export const BannerTitle = styled("h1", {
   "@md": {
     fontSize: "$8xl",
   },
+  "@xl": {
+    paddingTop: "80px",
+  },
 
   "@xxl": {
     fontSize: "$9xl",
+    paddingRight: "50px",
   },
 
   "@el": {
@@ -99,11 +107,17 @@ export const BannerInfo = styled(Col, {
   zIndex: 3,
   paddingBottom: "$section",
 
+  "> div": {
+    alignContent: "end",
+  },
+
   "@xl": {
-    paddingLeft: "$10",
-    paddingRight: "0",
-    marginTop: "$40",
+    paddingTop: "$10",
     textAlign: "end",
+  },
+
+  "@el": {
+    paddingLeft: "$10",
   },
 
   h2: {
@@ -247,10 +261,10 @@ export const BannerItem = styled(Col, {
     height: "auto",
 
     "@xl": {
-      height: "280px",
+      height: "200px",
     },
 
-    "@xxl": {
+    "@el": {
       height: "320px",
     },
   },

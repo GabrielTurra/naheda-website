@@ -15,18 +15,38 @@ const HeaderNavigation: React.FC<HeaderNavigationProps> = () => {
   return (
     <NavigationContent>
       <NavigationComponent>
-        <li>Para Industria</li>
-        <li>Para Residência</li>
-        <li>Nossa Fábrica</li>
-        <li>Contate-nos</li>
+        {/* <li>
+          <a href="#">Para Industria</a>
+        </li>
+        <li>
+          <a href="#">Para Residência</a>
+        </li>
+        <li>
+          <a href="#">Nossa Fábrica</a>
+        </li> */}
+        <li>
+          <a target="_blank" href="https://wa.me/+5511969837062">
+            Contate-nos
+          </a>
+        </li>
       </NavigationComponent>
 
       <CollapsibleNavigation isOpen={controlCollapsible.isOpen}>
         <ul>
-          <li>Para Industria</li>
-          <li>Para Residência</li>
-          <li>Nossa Fábrica</li>
-          <li>Contate-nos</li>
+          {/* <li>
+            <a href="#">Para Industria</a>
+          </li>
+          <li>
+            <a href="#">Para Residência</a>
+          </li>
+          <li>
+            <a href="#">Nossa Fábrica</a>
+          </li> */}
+          <li>
+            <a target="_blank" href="https://wa.me/+5511969837062">
+              Contate-nos
+            </a>
+          </li>
         </ul>
       </CollapsibleNavigation>
 

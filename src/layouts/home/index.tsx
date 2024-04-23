@@ -16,7 +16,7 @@ export const HomeLayout: React.FC<LayoutProps> = ({ ...props }) => {
       <ImageDescription {...content.imageDescription} />
       <DoubleSelector {...content.doubleSelector} />
       <HighlightedCards {...content.highlightedCards} />
-      <ImageCardList {...content.imageCardList} />
+      {/* <ImageCardList {...content.imageCardList} /> */}
     </HomeComponent>
   );
 };
