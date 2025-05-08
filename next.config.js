@@ -11,8 +11,18 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   i18n: {
-    locales: ['en-US', 'pt-br'],
-    defaultLocale: 'pt-br',
+    locales: ['en-US', 'pt-BR'],
+    defaultLocale: 'pt-BR',
+    domains: [
+      {
+        domain: '/en-us/',
+        defaultLocale: 'en-US',
+      },
+      {
+        domain: '/pt-br/',
+        defaultLocale: 'pt-BR',
+      }
+    ],
   },
 };
 
